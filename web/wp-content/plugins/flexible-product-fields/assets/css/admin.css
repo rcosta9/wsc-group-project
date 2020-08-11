@@ -1,0 +1,273 @@
+.fpf-field-title-row:before, .fpf-field-title-row:after {
+	display: table;
+	content: '';
+}
+
+.fpf-field-title-row:after {
+	clear: both;
+}
+
+.fpf-drag {
+	cursor: move;
+}
+
+#fpf_fields .inside,
+#fpf_settings .inside {
+	margin: 0;
+	padding: 0;
+}
+
+#fpf_fields .inside ul {
+	margin: 0;
+}
+
+#fpf_fields .inside ul li {
+	margin: 0;
+}
+
+/* FPF Table */
+.fpf-table {
+	background-color: #fff;
+	border: 1px solid #dfdfdf;
+	border-spacing: 0;
+	border-radius: 0;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	table-layout: auto;
+	width: 100%;
+	/* th & td */
+	/* th */
+	/* td */
+}
+
+.fpf-inputs > .fpf-table {
+	border: none;
+}
+
+.fpf-table.fpf-options {
+	margin-bottom: 12px;
+}
+
+.fpf-table.fpf-options .fpf-option-delete:hover {
+	color: red;
+}
+
+.fpf-table > thead > tr > th,
+.fpf-table > tbody > tr > td {
+	background-color: #fff;
+	border-color: #EDEDED;
+	border-style: solid;
+	border-width: 1px 0 0 1px;
+	font-size: 14px;
+	line-height: 1.4em;
+	padding: 8px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.fpf-table > thead > tr > th.fpf-row-handle,
+.fpf-table > tbody > tr > td.fpf-row-handle {
+	vertical-align: middle;
+	width: 16px;
+}
+
+.fpf-table > thead > tr > th.fpf-row-price,
+.fpf-table > tbody > tr > td.fpf-row-price {
+	min-width: 60px;
+}
+
+.fpf-table > thead > tr > th {
+	position: relative;
+	color: #333333;
+	font-weight: normal;
+	border-color: #E1E1E1;
+	border-width: 0 0 1px 1px;
+}
+
+.fpf-table > thead > tr > th:first-child {
+	border-left-width: 0;
+}
+
+.fpf-table > tbody > tr > td {
+	font-size: 13px;
+}
+
+.fpf-table > tbody > tr:first-child > td {
+	border-top-width: 0;
+}
+
+.fpf-table > tbody > tr > td:first-child {
+	border-left-width: 0;
+}
+
+.fpf-table-field-adv,
+.fpf-table-field-properies {
+	border-top: 0px;
+}
+
+/* fields */
+.fpf-table tr > td.fpf-label,
+.fpf-table tr > td.fpf-input {
+	padding: 15px 12px;
+}
+
+.fpf-table tr > td.fpf-label {
+	background-color: #f9f9f9;
+	border-top-color: #f0f0f0;
+	width: 24%;
+}
+
+.fpf-table tr > td.fpf-input {
+	border-left-color: #e1e1e1;
+}
+
+/* Field Object */
+.fpf-field-object {
+	border-bottom: 1px solid #ededed;
+}
+
+.fpf-field-object:last-child {
+	border-bottom: none;
+}
+
+.open > .fpf-field-title-row {
+	background-color: #2a9bd9;
+	border: 1px solid #2696d3;
+	color: #fff;
+	text-shadow: 0 1px 0 #268fbb;
+}
+
+.fpf-field-title-row > div {
+	box-sizing: border-box;
+	float: left;
+	padding: 10px;
+	width: 38%;
+}
+
+.fpf-field-title-row .fpf-field-sort {
+	width: 24%;
+}
+
+.fpf-field-title-row .fpf-field-title {
+	min-width: 150px;
+}
+
+.fpf-field-title-row .fpf-row-actions {
+	display: block;
+	font-size: 12px;
+}
+
+.fpf-field-title-row .fpf-row-actions span {
+	color: #0073aa;
+	cursor: pointer;
+}
+
+.fpf-field-title-row .fpf-row-actions span.fpf-delete-action:hover {
+	color: red;
+}
+
+.open .fpf-field-title-row .fpf-row-actions span {
+	color: #fff;
+}
+
+/* Fields */
+.fpf-field input[type="text"],
+.fpf-field input[type="password"],
+.fpf-field input[type="number"],
+.fpf-field input[type="search"],
+.fpf-field input[type="email"],
+.fpf-field input[type="url"],
+.fpf-field textarea,
+.fpf-field select {
+	box-sizing: border-box;
+	font-size: 14px;
+	line-height: 1.4;
+	margin: 0;
+	padding: 3px 5px;
+	resize: none;
+	width: 100%;
+}
+
+.fpf-field textarea {
+	resize: vertical;
+}
+
+/* Disabled Fields */
+.fpf-field input:disabled,
+.fpf-field select:disabled,
+.fpf-field textarea:disabled {
+	background: #f8f8f8;
+}
+
+.fpf-field input[readonly],
+.fpf-field textarea[readonly] {
+	background: #f8f8f8;
+}
+
+.fpf-field .fpf-label label {
+	display: block;
+	font-weight: bold;
+	margin: 0 0 3px;
+	padding: 0;
+}
+
+.fpf-option-delete {
+	cursor: pointer;
+}
+
+.fpf-footer {
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	padding: 8px 15px;
+}
+
+.post-type-fpf_fields .tablenav select[name=m],
+.post-type-fpf_fields #post-query-submit {
+	display: none;
+}
+
+.post-type-fpf_fields .misc-pub-visibility,
+.post-type-fpf_fields .misc-pub-curtime {
+	display: none;
+}
+
+.fpf-fields span.optional {
+	display: none;
+}
+
+/* Metaboxes */
+.inspire-settings {
+	display: table;
+	width: 100%;
+}
+
+.inspire-settings .inspire-main-content,
+.inspire-settings .inspire-sidebar {
+	display: table-cell;
+	height: 500px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.inspire-settings .inspire-main-content {
+	min-width: 770px;
+}
+
+.inspire-settings .inspire-sidebar {
+	padding-left: 30px;
+	width: 280px;
+}
+
+.inside p.rate {
+	text-align: center;
+}
+
+.inside p.rate a {
+	text-decoration: none;
+}
+
+.inspire-sidebar .inside {
+	padding: 0 10px;
+}

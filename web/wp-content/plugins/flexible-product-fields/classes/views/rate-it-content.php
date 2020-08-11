@@ -1,0 +1,3 @@
+	fpf_message_box_rate += '<p class="rate"><a href="https://wpde.sk/fpf-rate" target="_blank"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></a></p>';
+    fpf_message_box_rate += '<p><?php printf( __( 'If you want to continue using Flexible Product Fields for free, %splease add a review%s. You will help us support the free version. Thank you.', 'flexible-product-fields' ),  '<a href="https://wpde.sk/fpf-rate" target="_blank">', '</a>' ); ?></p>';
+

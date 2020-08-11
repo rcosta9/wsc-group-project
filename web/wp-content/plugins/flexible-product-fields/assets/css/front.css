@@ -1,0 +1,41 @@
+/* Clear */
+.fpf-clear:before,
+.fpf-clear:after {
+	content: " ";
+	display: table;
+}
+
+.fpf-clear:after {
+	clear: both;
+}
+
+/* Fields */
+.fpf-fields {
+	display: block;
+	clear: both;
+	margin: 1em 0;
+}
+
+/* Totals */
+.fpf-totals dl {
+	margin-bottom: 1em;
+	overflow: hidden;
+}
+
+.fpf-totals dl:empty {
+	display: none;
+}
+
+.fpf-totals dt {
+	clear: left;
+	float: left;
+	width: 50%;
+}
+
+.fpf-totals dd {
+	float: left;
+}
+
+.fpf-fields span.optional {
+	display: none;
+}

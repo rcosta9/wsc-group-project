@@ -1,0 +1,698 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Flexible Product Fields\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Grzegorz Rola <grola@wpdesk.pl>\n"
+"Language-Team: Maciej Swoboda <maciej.swoboda@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-06-22T07:35:00+00:00\n"
+"PO-Revision-Date: 2020-06-22T07:35:00+00:00\n"
+"Language: \n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-WPHeader: flexible-product-fields.php\n"
+
+#: /builds/wpdesk/flexible-product-fields/classes/views/rate-it-content.php:2
+msgid "If you want to continue using Flexible Product Fields for free, %splease add a review%s. You will help us support the free version. Thank you."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-add-to-cart-filters.php:77
+msgid "Select options"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-cart.php:177
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product.php:107
+msgid "<strong>%s</strong>  is required field."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-cart.php:182
+msgid "Exceeded maximum number of characters for the %s field. (max: %s)"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-cart.php:193
+msgid "yes"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:121
+msgid "Total"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:172
+msgid "Add Field"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:173
+msgid "Section"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:174
+msgid "Assign this group to"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:175
+msgid "Select products"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:176
+msgid "Select categories"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:177
+msgid "Order Group"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:178
+msgid "Select ..."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:179
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:198
+msgid "Label"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:180
+msgid "Field Type"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:181
+msgid "Required"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:182
+msgid "Character Limit"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:183
+msgid "CSS Class"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:184
+msgid "Placeholder"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:185
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:197
+msgid "Value"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:186
+msgid "Price type"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:187
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:200
+msgid "Price"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:188
+msgid "Date format"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:189
+msgid "Days before"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:190
+msgid "Days after"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:191
+msgid "Options"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:192
+msgid "Conditional logic"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:193
+msgid "New field"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:194
+msgid "Edit field"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:195
+msgid "Delete field"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:196
+msgid "Add Option"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:199
+msgid "Price Type"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:201
+msgid "Type to search"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:202
+msgid "Sorry, there has been an error. Please try again later. Returned status code: "
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:203
+msgid "This field type is available in PRO version."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:205
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:208
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:211
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:213
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:217
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:232
+msgid "Upgrade to PRO →"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:206
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:212
+msgid "This option is available in PRO version."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:209
+msgid "Fields are available in PRO version."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:215
+msgid "Price fields are available in PRO version."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:218
+msgid "Show this field if"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:219
+msgid "Rules"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:220
+msgid "all rules match (and)"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:221
+msgid "one or more rules match (or)"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:222
+msgid "Field"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:223
+msgid "Condition"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:224
+msgid "Field value"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:225
+msgid "is"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:226
+msgid "is not"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:227
+msgid "Select field"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:228
+msgid "Select field value"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:229
+msgid "Add rule"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:230
+msgid "Conditional logis is available in PRO version."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:234
+msgid "checked"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:235
+msgid "unchecked"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:339
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:157
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-builder/src/Plugin/AbstractPlugin.php:198
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/Page/SettingsPage.php:46
+msgid "Settings"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:340
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:181
+msgid "Documentation"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:341
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-builder/src/Plugin/AbstractPlugin.php:191
+msgid "Support"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-plugin.php:345
+msgid "Upgrade"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:49
+msgid "Fields Groups"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:50
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:51
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:53
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:289
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:290
+msgid "Product Fields"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:54
+msgid "View Product Fields"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:55
+msgid "Add new Fields Group"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:56
+msgid "Add New"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:57
+msgid "Edit Fields Group"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:58
+msgid "Save Fields Group"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:59
+msgid "Search Fields Group"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:60
+msgid "Fields Group not found"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:61
+msgid "Fields Group not found in trash"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:63
+msgid "Product Fields."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:86
+msgid "Assign to"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:87
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:164
+msgid "Fields"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:115
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:199
+msgid "Product"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:116
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:200
+msgid "Category"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:117
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:201
+msgid "All products"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:173
+msgid "Enjoying the free version? Rate it!"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:260
+msgid "Fixed"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-post-type.php:261
+msgid "Percent"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:37
+msgid "Before add to cart button"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:41
+msgid "After add to cart button"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:60
+msgid "Text"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:74
+msgid "Textarea"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:88
+msgid "Select"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:104
+msgid "Radio"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:120
+msgid "Checkbox"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:134
+msgid "Heading"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:148
+msgid "Date"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:254
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:257
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:262
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product-fields.php:265
+msgid "Flexible Product Fields"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product.php:125
+msgid "%1$s has invalid value."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/fpf-product.php:526
+msgid "Required field"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/tracker.php:147
+msgid "Opt-in"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/classes/tracker.php:151
+msgid "Opt-out"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php:181
+msgid "The &#8220;%s&#8221; plugin cannot run on PHP versions older than %s. Please contact your host and ask them to upgrade."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php:184
+msgid "The &#8220;%s&#8221; plugin cannot run on WordPress versions older than %s. Please update WordPress."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php:187
+msgid "The &#8220;%s&#8221; plugin cannot run on WooCommerce versions older than %s. Please update WooCommerce."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php:190
+msgid "The &#8220;%s&#8221; plugin cannot run without OpenSSL module version at least %s. Please update OpenSSL module."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php:277
+msgid "The &#8220;%s&#8221; plugin requires at least %s version of %s to work correctly. Please update it"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php:338
+msgid "The &#8220;%s&#8221; plugin cannot run without %s active. Please install and activate %s plugin."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php:388
+msgid "The &#8220;%s&#8221; plugin requires free %s plugin. <a href=\"%s\">Install %s →</a>"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php:394
+msgid "The &#8220;%s&#8221; plugin requires activating %s plugin. <a href=\"%s\">Activate %s →</a>"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php:435
+msgid "The &#8220;%s&#8221; plugin cannot run without %s php module installed. Please contact your host and ask them to install %s."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php:460
+msgid "The &#8220;%s&#8221; plugin cannot run without %s php setting set to %s. Please contact your host and ask them to set %s."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker_With_Update_Disable.php:29
+msgid "The &#8220;%s&#8221; plugin disables temporarily as required %s plugin is being upgraded."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-builder/src/Plugin/AbstractPlugin.php:194
+msgid "Docs"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/WP/WPCapture.php:23
+msgid "Can not enable WP Desk Debug log! Cannot create directory %s or this directory is not writeable!"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/WP/WPCapture.php:36
+msgid "Can not enable WP Desk Debug log! Cannot create file %s!"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger.php:59
+msgid "Disabled"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger.php:59
+msgid "Emergency"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger.php:59
+msgid "Alert"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger.php:59
+msgid "Critical"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger.php:59
+msgid "Error"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger.php:59
+msgid "Warning"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger.php:59
+msgid "Notice"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger.php:59
+msgid "Info"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger.php:59
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/Integration/LogsIntegration.php:36
+msgid "Debug"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/Integration/LogsIntegration.php:37
+msgid "WP Desk Debug Log"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/Integration/LogsIntegration.php:64
+msgid "Writes error log to %s."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/Integration/LogsIntegration.php:92
+msgid "WP Desk Debug Log is enabled. %1$sPlease disable it after testing%2$s."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/Integration/TrackerIntegration.php:51
+msgid "Plugin usage tracking"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/Integration/TrackerIntegration.php:52
+msgid "Allow WP Desk to track plugin usage"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/Integration/TrackerIntegration.php:76
+msgid "No sensitive data is tracked, %sread more%s."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/Page/LibraryDebugPage.php:29
+msgid "Library report"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/HelperRemoveNotice.php:43
+msgid "We recommend to <a href=\"%s\">deactivate and remove</a> the \"WP Desk Helper\" plugin as it is no longer required by WP Desk plugins"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-helper/src/HelperRemoveNotice.php:56
+msgid "We recommend to <a href=\"%s\">remove</a> the \"WP Desk Helper\" plugin as it is no longer required by WP Desk plugins"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:59
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:64
+msgid "Save Changes"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:77
+msgid "API Key Activation"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:78
+msgid "API Key Status"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:79
+msgid "API Subscription Key"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:80
+msgid "API Subscription email"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:83
+msgid "API Key Deactivation"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:84
+msgid "Deactivate API Key"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:149
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/Action/LicenseActivation.php:141
+msgid "Plugin activated. "
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:154
+msgid "Connection failed to the API Key server. Try again later."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:226
+msgid "The subscription could not be deactivated. Use the Subscription Deactivation tab to manually deactivate the subscription before activating a new subscription."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php:247
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/Action/LicenseDeactivation.php:31
+msgid "Plugin subscription deactivated. "
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager.php:144
+msgid "Subscription Activation"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager.php:145
+msgid "Subscription Deactivation"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager.php:209
+msgid " <a target='_blank' href='%s'>Enter a valid subscription key for automatic updates.</a>"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager.php:330
+msgid "The %s%s%s API Key has not been activated, so you won't be supported and your plugin won't be updated! %sClick here%s to activate the API key and the plugin."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager.php:347
+msgid "<b>Warning!</b> You're blocking external requests which means you won't be able to get %s updates. Please add %s to %s."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:333
+msgid "The API key for %s has expired. You can reactivate or purchase a API key from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:344
+msgid "The subscription for %s is on-hold. You can reactivate the subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:355
+msgid "The subscription for %s has been cancelled. You can renew the subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</a>. A new API key will be emailed to you after your order has been completed."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:366
+msgid "The subscription for %s has expired. You can reactivate the subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:377
+msgid "The subscription for %s has been suspended. You can reactivate the subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:388
+msgid "The subscription for %s is still pending. You can check on the status of the subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:399
+msgid "The subscription for %s has been placed in the trash and will be deleted soon. You can purchase a new subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:410
+msgid "A subscription for %s could not be found. You can purchase a subscription from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:421
+msgid "A API key for %s could not be found. Maybe you forgot to enter a API key when setting up %s, or the key was deactivated in your account. You can reactivate or purchase a subscription key from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:432
+msgid "Download permission for %s has been revoked possibly due to a API key or subscription expiring. You can reactivate or purchase a API key from your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:443
+msgid "%s has not been activated. Go to the settings page and enter the API key and subscription email to activate %s."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php:454
+msgid "You changed the subscription for %s, so you will need to enter your new API Key in the settings page. The API Key should have arrived in your email inbox, if not you can get it by logging into your account <a href=\"%s\" target=\"_blank\">dashboard</a>."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/Action/LicenseActivation.php:132
+msgid "Connection failed to the Subscription Key API server. Try again later."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/views/class-wpdesk-helper-list-table.php:27
+msgid "No WP Desk plugins found."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/views/class-wpdesk-helper-list-table.php:39
+msgid "Plugin"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/views/class-wpdesk-helper-list-table.php:39
+msgid "Subscription Status"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/views/class-wpdesk-helper-list-table.php:39
+msgid "Subscription Data"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/views/class-wpdesk-helper-list-table.php:56
+msgid "Deactivated"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/views/class-wpdesk-helper-list-table.php:58
+msgid "Activated"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/views/licenses.php:37
+msgid "Get your subscription keys <a href=\"%s\" target=\"_blank\">here</a>. You can activate/deactivate API keys <strong>unlimited times on different domains</strong> as long as you have an active subscription."
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/LicensePage.php:41
+msgid "Subscriptions"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/views/tracker-connect.php:15
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/views/tracker-notice.php:19
+msgid "Hey %s,"
+msgstr ""
+
+#: /builds/wpdesk/flexible-product-fields/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/views/tracker-deactivate.php:11
+msgid "You are deactivating %s plugin."
+msgstr ""
