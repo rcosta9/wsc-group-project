@@ -240,6 +240,7 @@ return array(
     'VendorFPF\\WPDesk_Tracker_Data_Provider_Wordpress' => $baseDir . '/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/data_provider/class-wpdesk-tracker-data-provider-wordpress.php',
     'VendorFPF\\WPDesk_Tracker_Factory_Prefixed' => $baseDir . '/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/class-wpdesk-tracker-factory-prefixed.php',
     'VendorFPF\\WPDesk_Tracker_Interface' => $baseDir . '/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/class-wpdesk-tracker-interface.php',
+    'VendorFPF\\WPDesk_Tracker_Persistence_Consent' => $baseDir . '/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/persistence/class-wpdesk-tracker-persistence-consent.php',
     'VendorFPF\\WPDesk_Tracker_Sender' => $baseDir . '/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/sender/class-wpdesk-tracker-sender.php',
     'VendorFPF\\WPDesk_Tracker_Sender_Exception_WpError' => $baseDir . '/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/sender/Exception/class-wpdesk-tracker-sender-exception-wperror.php',
     'VendorFPF\\WPDesk_Tracker_Sender_Logged' => $baseDir . '/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/sender/class-wpdesk-tracker-sender-logged.php',

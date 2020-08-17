@@ -22,7 +22,7 @@ class WPCapture
             // Translators: directory.
             \__('Can not enable WP Desk Debug log! Cannot create directory %s or this directory is not writeable!', 'wpdesk-helper'),
             $dir
-        ), \VendorFPF\WPDesk\Logger\WP\WPDesk\Notice\Notice::NOTICE_TYPE_ERROR);
+        ), \VendorFPF\WPDesk\Notice\Notice::NOTICE_TYPE_ERROR);
     }
     /**
      * Add notice for file.
@@ -35,7 +35,7 @@ class WPCapture
             // Translators: directory.
             \__('Can not enable WP Desk Debug log! Cannot create file %s!', 'wpdesk-helper'),
             $file
-        ), \VendorFPF\WPDesk\Logger\WP\WPDesk\Notice\Notice::NOTICE_TYPE_ERROR);
+        ), \VendorFPF\WPDesk\Notice\Notice::NOTICE_TYPE_ERROR);
     }
     /**
      * Is debug log writable.
@@ -70,6 +70,10 @@ class WPCapture
             } else {
                 \fclose($log);
             }
+        }
+        if (!\is_writable($log_file)) {
+            $this->add_notice_for_file($log_file);
+            return \false;
         }
         return \true;
     }

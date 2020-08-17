@@ -281,26 +281,7 @@ class Flexible_Product_Fields_Plugin extends VendorFPF\WPDesk\PluginBuilder\Plug
 		parent::hooks();
 		add_action( 'init', array( $this, 'init_polylang' ) );
 		add_action( 'admin_init', array( $this, 'init_wpml' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'dequeue_react' ), 9999 );
 		$this->hooks_on_hookable_objects();
-	}
-
-	/**
-	 * Dequeue not compatible react scripts.
-	 */
-	public function dequeue_react() {
-		$screen = get_current_screen();
-		if ( isset( $screen ) && ( 'edit-fpf_fields' === $screen->id || 'fpf_fields' === $screen->id ) ) {
-			$scripts = wp_scripts();
-			foreach ( wp_scripts()->queue as $script ) {
-				$deps = $scripts->registered[ $script ]->deps;
-				if ( in_array( 'react', $deps, true ) || in_array( 'react-dom', $deps, true ) ) {
-					wp_dequeue_script( $script );
-				}
-			}
-			wp_dequeue_script( 'react' );
-			wp_dequeue_script( 'react-dom' );
-		}
 	}
 
 	/**

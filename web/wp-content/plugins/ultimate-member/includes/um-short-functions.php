@@ -778,7 +778,7 @@ function um_user_submitted_registration( $style = false ) {
  *
  * @since  2.1.4 
  */
-function um_user_submitted_registration_formatted( $style = false ){
+function um_user_submitted_registration_formatted( $style = false ) {
 	$output = null;
 
 	$submitted_data = um_user( 'submitted' );
@@ -793,7 +793,9 @@ function um_user_submitted_registration_formatted( $style = false ){
 
 	if ( isset( $submitted_data ) && is_array( $submitted_data ) ) {
 
-		$fields = UM()->query()->get_attr( 'custom_fields', $submitted_data['form_id'] );
+		if ( isset( $submitted_data['form_id'] ) ) {
+			$fields = UM()->query()->get_attr( 'custom_fields', $submitted_data['form_id'] );
+		}
 
 		if ( isset( $fields ) ) {
 
@@ -1033,6 +1035,9 @@ function um_filtered_social_link( $key, $match ) {
  */
 function um_filtered_value( $key, $data = false ) {
 	$value = um_user( $key );
+	if ( is_array( $value ) ) {
+		$value = add_magic_quotes( $value );
+	}
 
 	if ( ! $data ) {
 		$data = UM()->builtin()->get_specific_field( $key );
@@ -1331,24 +1336,27 @@ function um_is_core_page( $page ) {
 		return false;
 	}
 
-	if ( isset( $post->ID ) && isset( UM()->config()->permalinks[ $page ] ) && $post->ID == UM()->config()->permalinks[ $page ] )
+	if ( isset( $post->ID ) && isset( UM()->config()->permalinks[ $page ] ) && $post->ID == UM()->config()->permalinks[ $page ] ) {
 		return true;
+	}
 
-	if ( isset( $post->ID ) && get_post_meta( $post->ID, '_um_wpml_' . $page, true ) == 1 )
+	if ( isset( $post->ID ) && get_post_meta( $post->ID, '_um_wpml_' . $page, true ) == 1 ) {
 		return true;
+	}
 
 	if ( UM()->external_integrations()->is_wpml_active() ) {
 		global $sitepress;
-		if ( UM()->config()->permalinks[ $page ] == wpml_object_id_filter( $post->ID, 'page', true, $sitepress->get_default_language() ) ) {
+		if ( isset( UM()->config()->permalinks[ $page ] ) && UM()->config()->permalinks[ $page ] == wpml_object_id_filter( $post->ID, 'page', true, $sitepress->get_default_language() ) ) {
 			return true;
 		}
 	}
 
-	if (isset( $post->ID )) {
+	if ( isset( $post->ID ) ) {
 		$_icl_lang_duplicate_of = get_post_meta( $post->ID, '_icl_lang_duplicate_of', true );
 
-		if (isset( UM()->config()->permalinks[$page] ) && ( ( $_icl_lang_duplicate_of == UM()->config()->permalinks[$page] && !empty( $_icl_lang_duplicate_of ) ) || UM()->config()->permalinks[$page] == $post->ID ))
+		if ( isset( UM()->config()->permalinks[ $page ] ) && ( ( $_icl_lang_duplicate_of == UM()->config()->permalinks[ $page ] && !empty( $_icl_lang_duplicate_of ) ) || UM()->config()->permalinks[ $page ] == $post->ID ) ) {
 			return true;
+		}
 	}
 
 	return false;
@@ -1362,16 +1370,19 @@ function um_is_core_page( $page ) {
  * @return bool
  */
 function um_is_core_post( $post, $core_page ) {
-	if (isset( $post->ID ) && isset( UM()->config()->permalinks[$core_page] ) && $post->ID == UM()->config()->permalinks[$core_page])
+	if ( isset( $post->ID ) && isset( UM()->config()->permalinks[ $core_page ] ) && $post->ID == UM()->config()->permalinks[ $core_page ] ) {
 		return true;
-	if (isset( $post->ID ) && get_post_meta( $post->ID, '_um_wpml_' . $core_page, true ) == 1)
+	}
+	if ( isset( $post->ID ) && get_post_meta( $post->ID, '_um_wpml_' . $core_page, true ) == 1 ) {
 		return true;
+	}
 
-	if (isset( $post->ID )) {
+	if ( isset( $post->ID ) ) {
 		$_icl_lang_duplicate_of = get_post_meta( $post->ID, '_icl_lang_duplicate_of', true );
 
-		if (isset( UM()->config()->permalinks[$core_page] ) && ( ( $_icl_lang_duplicate_of == UM()->config()->permalinks[$core_page] && !empty( $_icl_lang_duplicate_of ) ) || UM()->config()->permalinks[$core_page] == $post->ID ))
+		if ( isset( UM()->config()->permalinks[ $core_page ] ) && ( ( $_icl_lang_duplicate_of == UM()->config()->permalinks[ $core_page ] && ! empty( $_icl_lang_duplicate_of ) ) || UM()->config()->permalinks[ $core_page ] == $post->ID ) ) {
 			return true;
+		}
 	}
 
 	return false;
@@ -2053,7 +2064,7 @@ function um_get_cover_uri( $image, $attrs ) {
 function um_get_avatar_url( $get_avatar ) {
 	preg_match( '/src="(.*?)"/i', $get_avatar, $matches );
 
-	return $matches[1];
+	return isset( $matches[1] ) ? $matches[1] : '';
 }
 
 

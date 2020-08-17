@@ -107,11 +107,15 @@ if ( ! class_exists( 'um\core\Uploader' ) ) {
 			add_filter( 'upload_dir', array( $this, 'set_upload_directory' ), 10, 1 );
 			add_filter( 'wp_handle_upload_prefilter', array( $this, 'validate_upload' ) );
 
+			add_filter( 'um_upload_image_result', array( $this, 'rotate_uploaded_image' ), 10, 1 );
 			add_filter( 'um_upload_image_process__profile_photo', array( $this, 'profile_photo' ), 10, 7 );
 			add_filter( 'um_upload_image_process__cover_photo', array( $this, 'cover_photo' ), 10, 7 );
 			add_action( 'um_upload_stream_image_process', array( $this, 'stream_photo' ), 10, 7 );
 
 			add_action( 'init', array( $this, 'init' ) );
+
+			//remove user old files
+			add_action( 'um_after_move_temporary_files', array( $this, 'remove_unused_uploads' ), 10, 3 );
 		}
 
 
@@ -355,6 +359,30 @@ if ( ! class_exists( 'um\core\Uploader' ) ) {
 			     */
 				$response['error'] = $movefile['error'];
 			} else {
+
+				/**
+				 * UM hook
+				 *
+				 * @type        filter
+				 * @title       um_upload_image_result
+				 * @description Filter uploaded image data
+				 * @input_vars  [
+				 * 	{"var":"$movefile", "type":"array", "desc":"Uploaded file info"},
+				 * 	{"var":"$user_id", "type":"int", "desc":"User ID"},
+				 * 	{"var":"$field_data", "type":"array", "desc":"Field data"}
+				 * ]
+				 * @change_log
+				 * ["Since: 2.1.6"]
+				 * @example
+				  <?php
+				  add_filter( 'um_upload_image_result', 'custom_um_upload_image_result', 10, 3 );
+				  function custom_um_upload_image_result( $movefile, $user_id, $field_data ) {
+						// your code here
+						return $movefile;
+				  }
+				  ?>
+				 */
+				$movefile = apply_filters( 'um_upload_image_result', $movefile, $user_id, $field_data );
 
 				$movefile['url'] = set_url_scheme( $movefile['url'] );
 
@@ -1165,6 +1193,28 @@ if ( ! class_exists( 'um\core\Uploader' ) ) {
 
 
 		/**
+		 * Fix image orientation
+		 *
+		 * @since 2.1.6
+		 *
+		 * @param  array $movefile
+		 * @return array
+		 */
+		public function rotate_uploaded_image( $movefile ) {
+			$image_fix_orientation = UM()->options()->get( 'image_orientation_by_exif' );
+			if ( $image_fix_orientation && $movefile['type'] == 'image/jpeg' ) {
+				$image = imagecreatefromjpeg( $movefile['file'] );
+				if ( $image ) {
+					$image = UM()->files()->fix_image_orientation( $image, $movefile['file'] );
+					$quality = UM()->options()->get( 'image_compression' );
+					imagejpeg( $image, $movefile['file'], $quality );
+				}
+			}
+			return $movefile;
+		}
+
+
+		/**
 		 * Move temporary files
 		 *
 		 * run when uploaded files are from custom fields
@@ -1258,8 +1308,10 @@ if ( ! class_exists( 'um\core\Uploader' ) ) {
 
 			}
 
-			//remove user old files
-			$this->remove_unused_uploads( $user_id, $new_files, $old_files );
+			/**
+			 * @hooked UM()->uploader()->remove_unused_uploads() - 10
+			 */
+			do_action( 'um_after_move_temporary_files', $user_id, $new_files, $old_files );
 		}
 
 
@@ -1271,36 +1323,34 @@ if ( ! class_exists( 'um\core\Uploader' ) ) {
 		 * @param array $old_files
 		 */
 		function remove_unused_uploads( $user_id, $new_files, $old_files = array() ) {
-			um_fetch_user( $user_id );
 
-			if ( ! file_exists( UM()->uploader()->get_upload_base_dir() . um_user( 'ID' ) . DIRECTORY_SEPARATOR ) ) {
+			if ( ! file_exists( $this->get_upload_user_base_dir( $user_id ) ) ) {
 				return;
 			}
 
+			UM()->user()->remove_cache( $user_id );
+			UM()->user()->set( $user_id );
 			$user_meta_keys = UM()->user()->profile;
 
 			$_array = $new_files;
 			if ( ! empty( UM()->builtin()->custom_fields ) ) {
 				foreach ( UM()->builtin()->custom_fields as $_field ) {
-					if ( $_field['type'] == 'file' && ! empty( $user_meta_keys[ $_field['metakey'] ] ) ) {
-						$_array[ $_field['metakey'] ] = $user_meta_keys[ $_field['metakey'] ];
+					if ( in_array( $_field['type'], array( 'file', 'image' ) ) && isset( $user_meta_keys[$_field['metakey']] ) && empty( $_array[$_field['metakey']] ) ) {
+						$_array[$_field['metakey']] = $user_meta_keys[$_field['metakey']];
 					}
 				}
 			}
 
-			$files = glob( UM()->uploader()->get_upload_base_dir() . um_user( 'ID' ) . DIRECTORY_SEPARATOR . '*', GLOB_BRACE );
+			$files = glob( UM()->uploader()->get_upload_base_dir() . $user_id . DIRECTORY_SEPARATOR . '*', GLOB_BRACE );
 			if ( ! empty( $files ) ) {
 				foreach ( $files as $file ) {
 					$str = basename( $file );
 
-					if ( preg_grep( '/' . $str . '/i', $old_files ) ) {
-						unlink( $file );
+					if ( strstr( $str, 'profile_photo' ) || strstr( $str, 'cover_photo' ) || preg_grep( '/' . $str . '/', $_array ) ) {
+						continue;
 					}
 
-					if ( ! strstr( $str, 'profile_photo' ) && ! strstr( $str, 'cover_photo' ) &&
-					     ! strstr( $str, 'stream_photo' ) && ! preg_grep( '/' . $str . '/', $_array ) ) {
-						unlink( $file );
-					}
+					unlink( $file );
 				}
 			}
 		}

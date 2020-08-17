@@ -3,9 +3,9 @@ Contributors: wpdesk,dyszczo,grola,piotrpo,marcinkolanko
 Donate link: https://www.wpdesk.net/products/flexible-product-fields-pro-woocommerce/
 Tags: product addons woocommerce, woocommerce product add-ons, woocommerce extra product options, woocommerce product customizer, product fields woocommerce, woocommerce product fields manager, woocommerce product fields editor, woocommerce product engraving, woocommerce product insurance, woocommerce product add to cart, woocommerce product options, woocommerce product checkboxes
 Requires at least: 4.5
-Tested up to: 5.4.2
+Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.3.0
+Stable tag: 1.3.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -133,6 +133,12 @@ We provide a limited support for the free version in the [plugin Support Forum](
 
 
 == Changelog ==
+
+= 1.3.2 - 2020-08-10 =
+* Added support for WordPress 5.5
+
+1.3.1 - 2020-07-28
+* Removed unneeded REACT dequeue.
 
 1.3.0 - 2020-06-17
 * Moved React to webpack.

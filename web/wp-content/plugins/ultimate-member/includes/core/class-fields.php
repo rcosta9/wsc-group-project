@@ -378,20 +378,25 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 		 * @return string
 		 */
 		function field_error( $text, $force_show = false ) {
+
+			if ( empty( $text ) ) {
+				return '';
+			}
+
 			if ( $force_show ) {
-				$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . $text . '</div>';
+				$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . esc_attr( $text ) . '</div>';
 				return $output;
 			}
 
 
 			if ( isset( $this->set_id ) && UM()->form()->processing == $this->set_id ) {
-				$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . $text . '</div>';
+				$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . esc_attr( $text ) . '</div>';
 			} else {
 				$output = '';
 			}
 
 			if ( ! UM()->form()->processing ) {
-				$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . $text . '</div>';
+				$output = '<div class="um-field-error"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . esc_attr( $text ) . '</div>';
 			}
 
 			return $output;
@@ -407,20 +412,25 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 		 * @return string
 		 */
 		function field_notice( $text, $force_show = false ) {
+
+			if ( empty( $text ) ) {
+				return '';
+			}
+
 			if ( $force_show ) {
-				$output = '<div class="um-field-notice"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . $text . '</div>';
+				$output = '<div class="um-field-notice"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . esc_attr( $text ) . '</div>';
 				return $output;
 			}
 
 
 			if ( isset( $this->set_id ) && UM()->form()->processing == $this->set_id ) {
-				$output = '<div class="um-field-notice"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . $text . '</div>';
+				$output = '<div class="um-field-notice"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . esc_attr( $text ) . '</div>';
 			} else {
 				$output = '';
 			}
 
 			if ( ! UM()->form()->processing ) {
-				$output = '<div class="um-field-notice"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . $text . '</div>';
+				$output = '<div class="um-field-notice"><span class="um-field-arrow"><i class="um-faicon-caret-up"></i></span>' . esc_attr( $text ) . '</div>';
 			}
 
 			return $output;
@@ -2279,7 +2289,8 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 					} else {
 
-						if ( $this->set_mode == 'account' || um_is_core_page( 'account' ) ) {
+						if ( UM()->account()->current_password_is_required( 'password' ) &&
+						     ( $this->set_mode == 'account' || um_is_core_page( 'account' ) ) ) {
 
 							$key = 'current_' . $original_key;
 							$output .= '<div ' . $this->get_atts( $key, $classes, $conditional, $data ) . '>';
@@ -2302,7 +2313,7 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 							if ( $this->is_error( $key ) ) {
 								$output .= $this->field_error( $this->show_error( $key ) );
-							}else if ( $this->is_notice( $key ) ) {
+							} elseif ( $this->is_notice( $key ) ) {
 								$output .= $this->field_notice( $this->show_notice( $key ) );
 							}
 
@@ -2332,7 +2343,12 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 						}
 
-						$output .= '<input class="' . $this->get_class( $key, $data ) . '" type="' . esc_attr( $input ) . '" name="' . esc_attr( $key . UM()->form()->form_suffix ) . '" id="' . esc_attr( $key . UM()->form()->form_suffix ) . '" value="' . $this->field_value( $key, $default, $data ) . '" placeholder="' . esc_attr( $placeholder ) . '" data-validate="' . esc_attr( $validate ) . '" data-key="' . esc_attr( $key ) . '" />
+						$name = $key . UM()->form()->form_suffix;
+						if ( $this->set_mode == 'password' && um_is_core_page( 'password-reset' ) ) {
+							$name = $key;
+						}
+
+						$output .= '<input class="' . $this->get_class( $key, $data ) . '" type="' . esc_attr( $input ) . '" name="' . esc_attr( $name ) . '" id="' . esc_attr( $key . UM()->form()->form_suffix ) . '" value="' . $this->field_value( $key, $default, $data ) . '" placeholder="' . esc_attr( $placeholder ) . '" data-validate="' . esc_attr( $validate ) . '" data-key="' . esc_attr( $key ) . '" />
 
 						</div>';
 
@@ -2361,7 +2377,12 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 							}
 
-							$output .= '<input class="' . $this->get_class( $key, $data ) . '" type="' . esc_attr( $input ) . '" name="' . esc_attr( $key . UM()->form()->form_suffix ) . '" id="' . esc_attr( $key . UM()->form()->form_suffix ) . '" value="' . $this->field_value( $key, $default, $data ) . '" placeholder="' . esc_attr( $placeholder ) . '" data-validate="' . esc_attr( $validate ) . '" data-key="' . esc_attr( $key ) . '" />
+							$name = $key . UM()->form()->form_suffix;
+							if ( $this->set_mode == 'password' && um_is_core_page( 'password-reset' ) ) {
+								$name = $key;
+							}
+
+							$output .= '<input class="' . $this->get_class( $key, $data ) . '" type="' . esc_attr( $input ) . '" name="' . esc_attr( $name ) . '" id="' . esc_attr( $key . UM()->form()->form_suffix ) . '" value="' . $this->field_value( $key, $default, $data ) . '" placeholder="' . esc_attr( $placeholder ) . '" data-validate="' . esc_attr( $validate ) . '" data-key="' . esc_attr( $key ) . '" />
 
 								</div>';
 

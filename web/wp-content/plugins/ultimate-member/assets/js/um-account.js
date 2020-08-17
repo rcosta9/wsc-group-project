@@ -31,6 +31,8 @@ jQuery(document).ready(function() {
 		jQuery('.um-account-nav a').removeClass('current');
 		jQuery('.um-account-nav a[data-tab="'+tab_+'"]').addClass('current');
 
+		wp.hooks.doAction( 'um_after_account_tab_changed', tab_ );
+
 		return false;
 	});
 
@@ -62,6 +64,8 @@ jQuery(document).ready(function() {
 		jQuery('.um-account-side li a').removeClass('current');
 		jQuery('.um-account-side li a[data-tab="'+tab_+'"]').addClass('current');
 
+		wp.hooks.doAction( 'um_after_account_tab_changed', tab_ );
+
 		return false;
 	});
 
@@ -73,15 +77,19 @@ jQuery(document).ready(function() {
 		var password = jQuery('#' + request_action).val();
 		jQuery('.um-field-area-response.' + request_action).hide();
 
-		if ( password === '' ) {
+		if ( jQuery('#' + request_action).length && password === '' ) {
 			jQuery('.um-field-error.' + request_action).show();
 		} else {
 			jQuery('.um-field-error.' + request_action).hide();
 			var request = {
 				request_action: request_action,
-				password: password,
 				nonce: um_scripts.nonce
 			};
+
+			if ( jQuery('#' + request_action).length ) {
+				request.password = password;
+			}
+
 			wp.ajax.send( 'um_request_user_data', {
 				data: request,
 				success: function (data) {

@@ -3,15 +3,15 @@
 	Plugin Name: Flexible Product Fields
 	Plugin URI: https://wordpress.org/plugins/flexible-product-fields/
 	Description: Allow customers to customize WooCommerce products before adding them to cart. Add fields text or textarea.
-	Version: 1.3.0
+	Version: 1.3.2
 	Author: WP Desk
 	Author URI: https://www.wpdesk.net/
 	Text Domain: flexible-product-fields
 	Domain Path: /lang/
 	Requires at least: 4.5
-	Tested up to: 5.4.2
-	WC requires at least: 3.8
-	WC tested up to: 4.3
+	Tested up to: 5.5
+	WC requires at least: 4.0
+	WC tested up to: 4.4
 	Requires PHP: 5.6
 
 	Copyright 2018 WP Desk Ltd.
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /* THIS VARIABLE CAN BE CHANGED AUTOMATICALLY */
-$plugin_version = '1.3.0';
+$plugin_version = '1.3.2';
 
 $plugin_name        = 'Flexible Product Fields';
 $product_id         = 'Flexible Product Fields';

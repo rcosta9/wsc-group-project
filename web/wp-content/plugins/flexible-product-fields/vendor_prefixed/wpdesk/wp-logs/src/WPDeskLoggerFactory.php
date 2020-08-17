@@ -103,7 +103,9 @@ class WPDeskLoggerFactory extends \VendorFPF\WPDesk\Logger\BasicLoggerFactory
     private function appendMainLog($logger)
     {
         $wpCapture = $this->captureWPLog();
-        $this->appendFileLog($logger, $wpCapture->get_log_file());
+        if (\is_writable($wpCapture->get_log_file())) {
+            $this->appendFileLog($logger, $wpCapture->get_log_file());
+        }
     }
     /**
      * @param Logger $logger
