@@ -2084,7 +2084,8 @@ dl.variation {
   .addresses header.title::after {
     clear: both; }
   .addresses header.title a {
-    float: left; }
+    float: left;
+    overflow: hidden; }
   .addresses header.title h3 {
     float: right; }
   /**

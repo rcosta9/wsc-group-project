@@ -4,8 +4,8 @@ Theme URI:    https://woocommerce.com/storefront/
 Author:       Automattic
 Author URI:   https://woocommerce.com/
 Description:  Storefront is the perfect theme for your next WooCommerce project. Designed and developed by WooCommerce Core developers, it features a bespoke integration with WooCommerce itself plus many of the most popular customer facing WooCommerce extensions. There are several layout & color options to personalise your shop, multiple widget regions, a responsive design and much more. Developers will love its lean and extensible codebase making it a joy to customize and extend. Looking for a WooCommerce theme? Look no further!
-Version:      2.5.8
-Tested up to: 5.4.2
+Version:      2.6.0
+Tested up to: 5.5.0
 Requires PHP: 5.6.0
 License:      GNU General Public License v2 or later
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
@@ -601,14 +601,11 @@ big {
 figure {
   margin: 0; }
 
-table {
-  margin: 0 0 1.41575em;
-  width: 100%; }
-
 img {
   height: auto;
   max-width: 100%;
-  display: block; }
+  display: block;
+  border-radius: 3px; }
 
 a {
   color: #2c2d33;
@@ -679,6 +676,15 @@ body {
 .header-widget-region {
   position: relative;
   z-index: 99; }
+  .header-widget-region::before, .header-widget-region::after {
+    content: '';
+    display: table; }
+  .header-widget-region::after {
+    clear: both; }
+  .header-widget-region .widget {
+    margin: 0;
+    padding: 1em 0;
+    font-size: 0.875em; }
 
 .site-branding {
   float: left;
@@ -864,6 +870,7 @@ body {
 table {
   border-spacing: 0;
   width: 100%;
+  margin: 0 0 1.41575em;
   border-collapse: separate; }
   table caption {
     padding: 1em 0;
@@ -1204,6 +1211,14 @@ input[type='submit'],
     .added_to_cart:disabled:hover {
       opacity: 0.5 !important; }
 
+.wc-block-components-button:not(.is-link).disabled,
+.wc-block-components-button:not(.is-link):disabled {
+  opacity: 0.5;
+  cursor: not-allowed; }
+  .wc-block-components-button:not(.is-link).disabled:hover,
+  .wc-block-components-button:not(.is-link):disabled:hover {
+    opacity: 0.5; }
+
 input[type='checkbox'],
 input[type='radio'] {
   padding: 0;
@@ -1297,9 +1312,6 @@ fieldset {
 /**
  * Media
  */
-img {
-  border-radius: 3px; }
-
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
@@ -1623,21 +1635,19 @@ button.menu-toggle {
       margin-left: 1.618em; }
 
 .widget-area .widget {
+  font-size: 0.875em;
   font-weight: 400; }
+  .widget-area .widget h1.widget-title {
+    font-size: 1.41575em; }
+  .widget-area .widget a {
+    font-weight: 600;
+    text-decoration: underline; }
+    .widget-area .widget a:hover {
+      text-decoration: none; }
+    .widget-area .widget a.button, .widget-area .widget a.components-button:not(.is-link), .widget-area .widget a.wp-block-button__link {
+      text-decoration: none; }
   .widget-area .widget a.button {
     font-weight: 600 !important; }
-
-.header-widget-region::before, .header-widget-region::after {
-  content: '';
-  display: table; }
-
-.header-widget-region::after {
-  clear: both; }
-
-.header-widget-region .widget {
-  margin: 0;
-  padding: 1em 0;
-  font-size: 0.875em; }
 
 .widget_search form,
 .widget_product_search form {
@@ -1699,18 +1709,6 @@ button.menu-toggle {
   .widget_product_categories ul .children,
   .widget_layered_nav ul .children,
   .widget_layered_nav_filters ul .children {
-    margin-top: 0.6180469716em;
-    margin-left: 1.618em; }
-  .widget_recent_entries ul .children,
-  .widget_pages ul .children,
-  .widget_categories ul .children,
-  .widget_archive ul .children,
-  .widget_recent_comments ul .children,
-  .widget_nav_menu ul .children,
-  .widget_links ul .children,
-  .widget_product_categories ul .children,
-  .widget_layered_nav ul .children,
-  .widget_layered_nav_filters ul .children {
     margin-left: 0;
     margin-top: 1em; }
 
@@ -1733,18 +1731,6 @@ button.menu-toggle {
     display: inline-block;
     height: 1em;
     line-height: 1; }
-
-.widget-area .widget {
-  font-size: 0.875em; }
-  .widget-area .widget h1.widget-title {
-    font-size: 1.41575em; }
-  .widget-area .widget a {
-    font-weight: 600;
-    text-decoration: underline; }
-    .widget-area .widget a:hover {
-      text-decoration: none; }
-    .widget-area .widget a.button, .widget-area .widget a.components-button:not(.is-link), .widget-area .widget a.wp-block-button__link {
-      text-decoration: none; }
 
 /**
  * Strictly Layout Styles
